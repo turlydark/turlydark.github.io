@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Sasuke&#39;s Blog">
 <meta property="og:description" content="问题： n^n的末尾数字, 如何用快速幂求解？ 相关内容  1.&amp;amp;按位与运算   0 &amp;amp; 0 = 0, 0 &amp;amp; 1 = 0, 1 &amp;amp; 0 = 0, 1 &amp;amp; 1 = 1 2.^异或运算   0^0 = 0, 0 ^ 1 = 1, 1 ^ 0 = 1, 1 ^ 1 = 0 3.|按位或运算   0 | 0 = 0, 0 | 1 = 1, 1 | 0 = 1, 1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-21T16:10:22.942Z">
+<meta property="og:updated_time" content="2018-02-21T16:12:10.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速幂">
 <meta name="twitter:description" content="问题： n^n的末尾数字, 如何用快速幂求解？ 相关内容  1.&amp;amp;按位与运算   0 &amp;amp; 0 = 0, 0 &amp;amp; 1 = 0, 1 &amp;amp; 0 = 0, 1 &amp;amp; 1 = 1 2.^异或运算   0^0 = 0, 0 ^ 1 = 1, 1 ^ 0 = 1, 1 ^ 1 = 0 3.|按位或运算   0 | 0 = 0, 0 | 1 = 1, 1 | 0 = 1, 1">
@@ -188,6 +188,7 @@
 <p>  0^0 = 0, 0 ^ 1 = 1, 1 ^ 0 = 1, 1 ^ 1 = 0</p>
 <p>3.|按位或运算</p>
 <p>  0 | 0 = 0, 0 | 1 = 1, 1 | 0 = 1, 1 | 1= 1</p>
+<a id="more"></a>
 <p><strong>左移运算符(&lt;&lt;)</strong> <strong>右移运算符(&gt;&gt;)</strong></p>
 <p>​    右移运算将一个位串信息向右移指定的位，右端移出的位的信息被丢弃。例如12&gt;&gt;2,结果为3。与左移相反，对于小整数，每右移1位，相当于除以2。在右移时，需要注意符号位问题。对无符号数据，右移时，左端空出的位用0补充。对于带符号的数据，如果移位前符号位为0(正数)，则左端也是用0补充；如果移位前符号位为1(负数)，则左端用0或用1补充，取决于计算机系统。对于负数右移，称用0补充的系统为“逻辑右移”，用1补充的系统为“算术右移”。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;  </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> m;  </span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; m;  </span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> index = m;  </span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> base = m;  </span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">1</span>;  </span><br><span class="line">    <span class="keyword">while</span>(index &gt; <span class="number">0</span>)&#123;  </span><br><span class="line">        <span class="keyword">if</span>(index &amp; <span class="number">1</span>)  </span><br><span class="line">            ans = (ans * base) % <span class="number">10</span>;  </span><br><span class="line">        base = (base * base) % <span class="number">10</span>;  </span><br><span class="line">        index &gt;&gt;= <span class="number">1</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans % <span class="number">10</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -319,7 +320,15 @@
           </div>
         </div>
       </div>
-      <footer id="footer">
+      <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+总访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+<footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
