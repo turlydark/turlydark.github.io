@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>临近期末写的数据结构总结 | Sasuke&#39;s Blog</title>
+  <title>Python基础语法 | Sasuke&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数组和广义表以及树的基本概念​    T4 若对n阶对称矩阵A以行序为主序方式将其下三角形的元素(包括主对角线上所有元素)依次存放于一维数组B［1..(n(n+1))/2］中，则在B中确定aij（i&amp;lt;j）的位置k的关系为 j * (j - 1) / 2 + i 当i &amp;gt; j 时，k的位置关系为i * (i - 1) / 2 + j 如    11  12 ​    21  22  的对">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 Python不必声明变量 变量，必须是字母数字和下划线的组合，且不能以数字开头 关于变量 123456x = 1;y = x;y = 2;print(x);x = 2">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="临近期末写的数据结构总结">
-<meta property="og:url" content="http://yoursite.com/2018/02/21/data1/index.html">
+<meta property="og:title" content="Python基础语法">
+<meta property="og:url" content="http://yoursite.com/2018/04/06/python/index.html">
 <meta property="og:site_name" content="Sasuke&#39;s Blog">
-<meta property="og:description" content="数组和广义表以及树的基本概念​    T4 若对n阶对称矩阵A以行序为主序方式将其下三角形的元素(包括主对角线上所有元素)依次存放于一维数组B［1..(n(n+1))/2］中，则在B中确定aij（i&amp;lt;j）的位置k的关系为 j * (j - 1) / 2 + i 当i &amp;gt; j 时，k的位置关系为i * (i - 1) / 2 + j 如    11  12 ​    21  22  的对">
+<meta property="og:description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 Python不必声明变量 变量，必须是字母数字和下划线的组合，且不能以数字开头 关于变量 123456x = 1;y = x;y = 2;print(x);x = 2">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-06T16:37:17.507Z">
+<meta property="og:updated_time" content="2018-04-06T16:33:38.312Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="临近期末写的数据结构总结">
-<meta name="twitter:description" content="数组和广义表以及树的基本概念​    T4 若对n阶对称矩阵A以行序为主序方式将其下三角形的元素(包括主对角线上所有元素)依次存放于一维数组B［1..(n(n+1))/2］中，则在B中确定aij（i&amp;lt;j）的位置k的关系为 j * (j - 1) / 2 + i 当i &amp;gt; j 时，k的位置关系为i * (i - 1) / 2 + j 如    11  12 ​    21  22  的对">
+<meta name="twitter:title" content="Python基础语法">
+<meta name="twitter:description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 Python不必声明变量 变量，必须是字母数字和下划线的组合，且不能以数字开头 关于变量 123456x = 1;y = x;y = 2;print(x);x = 2">
   
     <link rel="alternative" href="/atom.xml" title="Sasuke&#39;s Blog" type="application/atom+xml">
   
@@ -159,126 +159,115 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-data1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-python" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      临近期末写的数据结构总结
+      Python基础语法
     </h1>
   
 
         
-        <a href="/2018/02/21/data1/" class="archive-article-date">
-  	<time datetime="2018-02-21T15:59:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-21</time>
+        <a href="/2018/04/06/python/" class="archive-article-date">
+  	<time datetime="2018-04-06T14:32:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-06</time>
 </a>
         
       </header>
     
 	<!-- 目录内容 -->
-
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-          <span class="btn-bg"></span>
-          <span class="btn-text">文章导航</span>
-          </p>
-	<div id="toc-article" class="toc-article">
-	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-		<strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组和广义表以及树的基本概念"><span class="toc-number">1.</span> <span class="toc-text">数组和广义表以及树的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二叉树"><span class="toc-number">2.</span> <span class="toc-text">二叉树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#树和森林"><span class="toc-number">3.</span> <span class="toc-text">树和森林</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Huffman树"><span class="toc-number">4.</span> <span class="toc-text">Huffman树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图的概念-存储结构和遍历"><span class="toc-number">5.</span> <span class="toc-text">图的概念 存储结构和遍历</span></a></li></ol>
-         </div>
-   <script type="text/javascript">
-	function showToc(){
-		var toc_article = document.getElementById("toc-article");
-		var show_toc_btn = document.getElementById("show-toc-btn");
-		toc_article.setAttribute("style","display:block");
-		show_toc_btn.setAttribute("style","display:none");
-		};
-	function showBtn(){
-		var toc_article = document.getElementById("toc-article");
-		var show_toc_btn = document.getElementById("show-toc-btn");
-		toc_article.setAttribute("style","display:none");
-		show_toc_btn.setAttribute("style","display:block");
-		};
-   </script>
-      		
+		
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数组和广义表以及树的基本概念"><a href="#数组和广义表以及树的基本概念" class="headerlink" title="数组和广义表以及树的基本概念"></a>数组和广义表以及树的基本概念</h2><p>​    <strong>T4</strong> 若对n阶对称矩阵A以行序为主序方式将其下三角形的元素(包括主对角线上所有元素)依次存放于一维数组B［1..(n(n+1))/2］中，则在B中确定aij<strong>（i&lt;j）</strong>的位置k的关系为 j * (j - 1) / 2 + i</p>
-<p>当i &gt; j 时，k的位置关系为i * (i - 1) / 2 + j</p>
-<p>如    11  12</p>
-<p>​    21  22  的对称矩阵 ，其一维数组是B[a11 a21 a22]</p>
-<p>求a12的k，实则是求a21,又因为j &gt; i, 所以有j * (j - 1) / 2 + i</p>
+        <h3 id="变量与编码"><a href="#变量与编码" class="headerlink" title="变量与编码"></a>变量与编码</h3><p>‘#’ 注释</p>
+<p>字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “</p>
+<p>布尔值为 True 和 False，可以用and or 和 not （与或非）运算</p>
+<p>空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义</p>
+<p>Python不必声明变量</p>
+<p>变量，必须是字母数字和下划线的组合，且不能以数字开头</p>
+<p><strong>关于变量</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span>;</span><br><span class="line">y = x;</span><br><span class="line">y = <span class="number">2</span>;</span><br><span class="line">print(x);</span><br><span class="line">x = <span class="number">2</span>;</span><br><span class="line">print(x);</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p><strong>T5</strong>广义表的操作</p>
-<p>tail()去掉表头第一个元素，保留尾部</p>
-<p>head()去掉表末尾最后一个元素，保留头部</p>
-<p>​    已知广义表L=（（x,y,z），a，（u，t，w）），从L表中取出原子项t的运算是    </p>
-<p>head（tail(head（tail（tail（L）））））</p>
-<p><strong>广义表基本概念</strong></p>
-<p>​    <strong>表长</strong>：第一层元素个数，原子或子表算一个</p>
-<p>​    <strong>表深</strong>：最大嵌套次数</p>
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>已知后序遍历和中序遍历，求前序遍历，从后往前看</p>
-<p>已知前序遍历和中序遍历，求后序遍历，从前往后看</p>
-<p>​    <strong>T15</strong>某二叉树的前序和后序遍历序列正好相反，则该二叉树一定是</p>
-<p>高度等于其结点数</p>
-<p>​    <strong>T7</strong>如果一棵非空k（k≥2）叉树T中每个非叶子结点都有k个孩子，则称T为正则k叉树。若T有m个非叶子结点，则T中的叶子结点个数为</p>
-<p>​    k^(n - 1)  -  1 / (k - 1)  = m</p>
-<p>​    叶子结点为k ^ (n  -  1)， 即m(k  - 1) + 1</p>
-<p><strong>任何一棵树的叶子结点在前序、中序和后序遍历中的相对次序不发生改变</strong></p>
-<ul>
-<li>求根节点</li>
-</ul>
-<p>边数e  = n - 1</p>
-<p>结点数n  = n0 + n1 + n2 +……</p>
-<p>且边数e = 1 <em> n1 + 2 </em> n2 + 3 * n3+ ……</p>
-<p>所以根结点n0 =  n2 + 2 <em> n3 + 3 </em> n4 + …… + 1</p>
-<ul>
-<li>正则k叉树的度为n则说明树的最大度为n</li>
-</ul>
-<h2 id="树和森林"><a href="#树和森林" class="headerlink" title="树和森林"></a>树和森林</h2><ul>
-<li>若一个具有N个结点K条边的非连通无向图是森林,则该森林中必有N-K棵树</li>
-</ul>
-<pre><code>将森林转换为对应的二叉树，若在二叉树中，结点u是结点v的父结点的父结点，则在原来的森林中，u和v可能具有的关系是： 
-</code></pre><ol>
-<li>父子关系； 2. 兄弟关系； 3. u的父结点与v的父结点是兄弟关系</li>
-</ol>
-<p>还原到森林看u和v的关系</p>
-<ul>
-<li><strong>T7</strong> 已知一棵完全二叉树的第6层（设根为第1层）有8个叶结点，则该完全二叉树的结点个数最多是</li>
-<li><strong>T8</strong>在一个用数组表示的完全二叉树中，如果根结点下标为1，那么下标为17和19这两个结点的最近公共祖先结点在哪里（数组下标）？ （注：两个结点的“公共祖先结点”是指同时都是这两个结点祖先的结点）公共祖先结点为4</li>
-<li><strong>树的先根序遍历</strong>代码和二叉树的先序遍历基本相同</li>
-<li>对二叉链表进行中序遍历，对应到树上是<strong>树的后根序遍历</strong> ，代码和二叉树的中序遍历基本相同</li>
-</ul>
-<h2 id="Huffman树"><a href="#Huffman树" class="headerlink" title="Huffman树"></a>Huffman树</h2><p>WPL</p>
-<h2 id="图的概念-存储结构和遍历"><a href="#图的概念-存储结构和遍历" class="headerlink" title="图的概念 存储结构和遍历"></a>图的概念 存储结构和遍历</h2><p>用邻接表法存储图，占用的存储空间数只与图中结点个数有关，而与边数无关</p>
-<p>用邻接矩阵法存储图，占用的存储空间数只与图中结点个数有关，而与边数无关</p>
-<p>在一个有向图中，所有顶点的入度和出度之和等于所有边之和的两倍</p>
-<p>在任一有向图中，所有顶点的入度之和等于所有顶点的出度之和</p>
-<p>如果 G 是有向图 ，那么连接i和j的路径中所有的边都必须同向。如果图中任意两点都是连通的，那么图被称作连通图。如果此图是有向图，则称为强连通图（注意：需要双向都有路径）</p>
-<p>有向图的极大强连通子图称为G的强连通分量。</p>
+<p>/相当于浮点数除法，//表示C中的整型整数相除</p>
+<p>对整数和浮点数的大小没有限制，但是超出一定范围表示为inf（无限大</p>
+<p><code>ord()</code>函数获取字符的整数表示，<code>chr()</code>函数把编码转换为对应的字符</p>
+<p><code>len()</code>函数计算的是<code>str</code>的字符数</p>
+<p>为了避免乱码问题，应当始终坚持使用UTF-8编码对<code>str</code>和<code>bytes</code>进行转换。</p>
+<p><strong>字符编码</strong></p>
+<p>由于Python源代码也是一个文本文件，所以，当你的源代码中包含中文的时候，在保存源代码时，就需要务必指定保存为UTF-8编码。当Python解释器读取源代码时，为了让它按UTF-8编码读取，我们通常在文件开头写上这两行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python3</span><br><span class="line"># -*- coding: utf-8 -*-</span><br></pre></td></tr></table></figure>
+<p>第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；</p>
+<p>第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。<br><strong>格式化</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'Hello, %s'</span> % <span class="string">'world'</span>)</span><br><span class="line">print(<span class="string">'Hi, %s, you have $%d.'</span> % (<span class="string">'Michael'</span>, <span class="number">1000000</span>))</span><br></pre></td></tr></table></figure>
+<p>输出为</p>
 <blockquote>
-<p>有n个顶点的强连通图最多有n（n-1）条边，最少有n条边。</p>
-<p>解释如下：</p>
-<p>强连通图（Strongly Connected Graph）是指一个有向图（Directed Graph）中任意两点v1、v2间存在v1到v2的路径（path）及v2到v1的路径的图。</p>
-<p>最多的情况：</p>
-<p>即n个顶点中两两相连，若不计方向，n个点两两相连有n（n-1）/2条边，而由于强连通图是有向图，故每条边有两个方向，n（n-1）/2×2=n（n-1），故有n个顶点的强连通图最多有n（n-1）条边。</p>
-<p>最少的情况：</p>
-<p>即n个顶点围成一个圈，且圈上各边方向一致，即均为顺时针或者逆时针，此时有n条边。</p>
-<p>举例：</p>
-<p>如下图ABCD四个点构成强连通图</p>
-<p>边数最多有4×3=12条，</p>
-<p>边数最少有4条</p>
+<p>Hello, world<br>Hi, Michael, you have $1000000.</p>
 </blockquote>
-<p>分辨深度优先搜索、广度优先搜索</p>
-<p>分辨边数和度数</p>
-<p>Dijkstra算法</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1000</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 99999999</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, s, d;</span><br><span class="line"><span class="keyword">int</span> teams[N];</span><br><span class="line"><span class="keyword">int</span> mp[N][N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> vis[N];</span><br><span class="line"><span class="keyword">int</span> pre[N];</span><br><span class="line"><span class="keyword">int</span> amount[N];</span><br><span class="line"><span class="keyword">int</span> pathCount[N];</span><br><span class="line"><span class="keyword">int</span> dis[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        pathCount[i] = <span class="number">0</span>;</span><br><span class="line">        vis[i] = <span class="literal">false</span>;</span><br><span class="line">        amount[i] = teams[i];</span><br><span class="line">        pre[i] = <span class="number">-1</span>;</span><br><span class="line">        dis[i] = mp[s][i];</span><br><span class="line">    &#125;</span><br><span class="line">    pathCount[s] = <span class="number">1</span>;</span><br><span class="line">    dis[s] = <span class="number">0</span>;</span><br><span class="line">    vis[s] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">int</span> newP = s;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (newP != d)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!vis[i])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//</span></span><br><span class="line">                <span class="keyword">if</span> (dis[newP] + mp[newP][i] &lt; dis[i])</span><br><span class="line">                &#123;</span><br><span class="line">                    dis[i] = dis[newP] + mp[newP][i];</span><br><span class="line">                    pathCount[i] = pathCount[newP];</span><br><span class="line">                    amount[i] = amount[newP] + teams[i];</span><br><span class="line">                    pre[i] = newP;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (dis[newP] + mp[newP][i] == dis[i])</span><br><span class="line">                &#123;</span><br><span class="line">                    pathCount[i] += pathCount[newP];</span><br><span class="line">                    <span class="keyword">if</span> (amount[newP] + teams[i] &gt; amount[i])</span><br><span class="line">                    &#123;</span><br><span class="line">                        amount[i] = amount[newP] + teams[i];</span><br><span class="line">                        pre[i] = newP;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="comment">// if</span></span><br><span class="line">        &#125;<span class="comment">// for</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> minn = INF;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!vis[i] &amp;&amp; dis[i] &lt; minn)</span><br><span class="line">            &#123;</span><br><span class="line">                minn = dis[i];</span><br><span class="line">                newP = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        vis[newP] = <span class="literal">true</span>;</span><br><span class="line">    &#125;<span class="comment">// while</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//freopen("in", "r", stdin);</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>, &amp;n,&amp;m,&amp;s,&amp;d) != EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;teams[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                mp[i][j] = INF;</span><br><span class="line">            &#125;</span><br><span class="line">            mp[i][i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> tmpi, tmpj,tmpdist;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;tmpi, &amp;tmpj, &amp;tmpdist);</span><br><span class="line">            mp[tmpi][tmpj] = tmpdist;</span><br><span class="line">            mp[tmpj][tmpi] = tmpdist;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Dijkstra();</span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, pathCount[d], amount[d]);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">        <span class="keyword">int</span> lenv = <span class="number">0</span>;</span><br><span class="line">        v.clear();</span><br><span class="line">        <span class="keyword">int</span> vn = d;</span><br><span class="line">        <span class="keyword">while</span> (vn != <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            v.push_back(vn);</span><br><span class="line">            lenv++;</span><br><span class="line">            vn = pre[vn];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, v[lenv<span class="number">-1</span>]);</span><br><span class="line">        <span class="keyword">for</span> (i = lenv<span class="number">-2</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">" %d"</span>, v[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>平衡因子 = 左子树深度 - 右子树深度</strong></p>
-<p><strong>求解nextval：</strong></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">求nextval数组值有两种方法，一种是不依赖next数组值直接用观察法求得，一种方法是根据next数组值进行推理，两种方法均可使用，视更喜欢哪种方法而定。</span><br><span class="line"></span><br><span class="line">　   本文主要分析nextval数组值的第二种方法：</span><br><span class="line"></span><br><span class="line">　　模式串      a b a a b c a c</span><br><span class="line"></span><br><span class="line">　　next值      <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">3</span> <span class="number">1</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line">　　nextval值   <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">2</span> <span class="number">1</span> <span class="number">3</span> <span class="number">0</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">　　<span class="number">1.</span>第一位的nextval值必定为<span class="number">0</span>，第二位如果于第一位相同则为<span class="number">0</span>，如果不同则为<span class="number">1</span>。</span><br><span class="line"></span><br><span class="line">　　<span class="number">2.</span>第三位的next值为<span class="number">1</span>，那么将第三位和第一位进行比较，均为a，相同，则，第三位的nextval值为<span class="number">0</span>。</span><br><span class="line"></span><br><span class="line">　　<span class="number">3.</span>第四位的next值为<span class="number">2</span>，那么将第四位和第二位进行比较，不同，则第四位的nextval值为其next值，为<span class="number">2</span>。</span><br><span class="line"></span><br><span class="line">　　<span class="number">4.</span>第五位的next值为<span class="number">2</span>，那么将第五位和第二位进行比较，相同，第二位的next值为<span class="number">1</span>，则继续将第二位与第一位进行比较，不同，则第五位的nextval值为第二位的next值，为<span class="number">1</span>。</span><br><span class="line"></span><br><span class="line">　　<span class="number">5.</span>第六位的next值为<span class="number">3</span>，那么将第六位和第三位进行比较，不同，则第六位的nextval值为其next值，为<span class="number">3</span>。</span><br><span class="line"></span><br><span class="line">　　<span class="number">6.</span>第七位的next值为<span class="number">1</span>，那么将第七位和第一位进行比较，相同，则第七位的nextval值为<span class="number">0</span>。</span><br><span class="line"></span><br><span class="line">　　<span class="number">7.</span>第八位的next值为<span class="number">2</span>，那么将第八位和第二位进行比较，不同，则第八位的nextval值为其next值，为<span class="number">2</span>。</span><br></pre></td></tr></table></figure>
+<p>类似于C的常见的占位符有</p>
+<p>%d 整数</p>
+<p>%f 浮点数</p>
+<p>%s 字符串</p>
+<p>%x 十六进制整数</p>
+<p>位数控制，前置0也类似C</p>
+<p>%.2d %2d %0d</p>
+<h3 id="数据容器"><a href="#数据容器" class="headerlink" title="数据容器"></a><strong>数据容器</strong></h3><p>容器这个词让我想到了<del>圣杯战争</del>数据结构如vector、set</p>
+<p><strong>list</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">'a'</span>,  <span class="string">'b'</span>,  <span class="string">'c'</span>]</span><br><span class="line"><span class="comment">#init a list</span></span><br><span class="line">len(name)</span><br><span class="line"><span class="comment">#ouput the number of members</span></span><br></pre></td></tr></table></figure>
+<p>可以用索引访问，如name[1]</p>
+<p>当索引超出了范围时，Python会报一个<code>IndexError</code>错误，所以，要确保索引不要越界，记得最后一个元素的索引是<code>len(name) - 1</code></p>
+<p>list中可以包含其他的list，用<code>pop()</code>删除元素<br><strong>tuple</strong></p>
+<p>元组，初始化不可修改</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">classmates = (<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>)</span><br><span class="line">t = (<span class="string">'a'</span>, <span class="string">'b'</span>, [<span class="string">'A'</span>, <span class="string">'B'</span>])</span><br><span class="line">t[<span class="number">2</span>][<span class="number">0</span>] = <span class="string">'X'</span></span><br><span class="line">t[<span class="number">2</span>][<span class="number">1</span>] = <span class="string">'Y'</span></span><br><span class="line">print(t)</span><br></pre></td></tr></table></figure>
+<p>输出为</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; (&apos;a&apos;, &apos;b&apos;, [&apos;X&apos;, &apos;Y&apos;])</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>其中指向t[2]的指针没有改变，但是<code>t[2][0]</code>和<code>t[2][1]</code>的赋值改变了，故tuple还是不变的</p>
+<p><strong>dict</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = &#123;<span class="string">'Michael'</span>: <span class="number">95</span>, <span class="string">'Bob'</span>: <span class="number">75</span>, <span class="string">'Tracy'</span>: <span class="number">85</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d[<span class="string">'Michael'</span>]</span><br><span class="line"><span class="number">95</span></span><br></pre></td></tr></table></figure>
+<p>访问方式d[‘x’]来访问key对应的value</p>
+<p>通过dict提供的<code>get()</code>方法，如果key不存在，可以返回<code>None</code>，或者自己指定的value</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>d.get(<span class="string">'Thomas'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d.get(<span class="string">'Thomas'</span>, <span class="number">-1</span>)</span><br><span class="line"><span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<p>要避免key不存在的错误，有两种办法，一是通过<code>in</code>判断key是否存在：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'Thomas'</span> <span class="keyword">in</span> d</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<p>由key确定value存储位置</p>
+<p>要删除一个key，用<code>pop(key)</code>方法，对应的value也会从dict中删除</p>
+<p>key通过哈希求得value的存储位置，故key的值不可变</p>
+<p><strong>set</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = set([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>通过<code>add(key)</code>方法可以添加元素到set中，可以重复添加，但不会有效果</p>
+<p>通过<code>remove(key)</code>方法可以删除元素，删除不存在的元素报错</p>
+<p><strong>不可变对象str</strong></p>
+<p>而对于不可变对象，比如str，对str进行操作呢：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">'abc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.replace(<span class="string">'a'</span>, <span class="string">'A'</span>)</span><br><span class="line"><span class="string">'Abc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line"><span class="string">'abc'</span></span><br></pre></td></tr></table></figure>
+<p>虽然字符串有个<code>replace()</code>方法，也确实变出了<code>&#39;Abc&#39;</code>，但变量<code>a</code>最后仍是<code>&#39;abc&#39;</code></p>
+<h3 id="条件判断与循环"><a href="#条件判断与循环" class="headerlink" title="条件判断与循环"></a>条件判断与循环</h3><p><strong>判断</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">3</span> &gt; <span class="number">1</span>:</span><br><span class="line">    print(<span class="string">"3 &gt; 1"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    printf(<span class="string">"3 &lt;= 1"</span>)</span><br></pre></td></tr></table></figure>
+<p>elif是else if的缩写</p>
+<p>不要忘记引号</p>
+<p>if x：</p>
+<p>只要<code>x</code>是非零数值、非空字符串、非空list等，就判断为<code>True</code>，否则为<code>False</code></p>
+<p>input(’please enter a str‘) 返回类型是str</p>
+<p>int() 将str转为int</p>
+<p><strong>循环</strong></p>
+<p><code>for x in ...</code>循环，把每个元素代入变量<code>x</code>，然后执行缩进块的语句</p>
+<p><code>range()</code>函数，可以生成一个整数序列</p>
+<p><code>list()</code>函数可以转换为list</p>
+<p>类似的还有while循环 <code>while x &gt; 0:</code></p>
+<p>可以使用break和continue</p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>sum()函数参数为一个list</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'sum([1, 2, 3]) ='</span>, sum([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]))</span><br></pre></td></tr></table></figure>
+<p>max()与min()可以含有多个参数</p>
+<p>更多可见<a href="https://docs.python.org/3/library/functions.html#abs" target="_blank" rel="noopener">Python函数英文文档</a></p>
+<p><strong>定义函数</strong></p>
+<p>在Python中，定义一个函数要使用<code>def</code>语句，依次写出函数名、括号、括号中的参数和冒号<code>:</code>，然后，在缩进块中编写函数体，函数的返回值用<code>return</code>语句返回</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bigger</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> a &gt;= b:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> b</span><br></pre></td></tr></table></figure>
+<p>如果没有<code>return</code>语句，函数执行完毕后也会返回结果，只是结果为<code>None</code>。<code>return None</code>可以简写为<code>return</code></p>
+<p>如果你已经把<code>my_abs()</code>的函数定义保存为<code>abstest.py</code>文件了，那么，可以在该文件的当前目录下启动Python解释器，用<code>from abstest import my_abs</code>来导入<code>my_abs()</code>函数，注意<code>abstest</code>是文件名（不含<code>.py</code>扩展名）</p>
+<p>（本文基于廖雪峰的Python教程）</p>
 
       
 
@@ -292,7 +281,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -348,7 +337,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/02/21/data1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/06/python/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -362,18 +351,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/02/22/kuaisumi/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          快速幂
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/02/21/xiaobo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的名字</div>
+    <a href="/2018/03/30/fudu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">当我谈复读时我谈些什么</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -392,19 +372,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组和广义表以及树的基本概念"><span class="toc-number">1.</span> <span class="toc-text">数组和广义表以及树的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二叉树"><span class="toc-number">2.</span> <span class="toc-text">二叉树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#树和森林"><span class="toc-number">3.</span> <span class="toc-text">树和森林</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Huffman树"><span class="toc-number">4.</span> <span class="toc-text">Huffman树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图的概念-存储结构和遍历"><span class="toc-number">5.</span> <span class="toc-text">图的概念 存储结构和遍历</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
