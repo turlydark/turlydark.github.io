@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Python基础语法 | Sasuke&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 Python不必声明变量 变量，必须是字母数字和下划线的组合，且不能以数字开头 关于变量 123456x = 1;y = x;y = 2;print(x);x = 2">
+  <meta name="description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 变量，必须是字母数字和下划线的组合，且不能以数字开头">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础语法">
 <meta property="og:url" content="http://yoursite.com/2018/04/06/python/index.html">
 <meta property="og:site_name" content="Sasuke&#39;s Blog">
-<meta property="og:description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 Python不必声明变量 变量，必须是字母数字和下划线的组合，且不能以数字开头 关于变量 123456x = 1;y = x;y = 2;print(x);x = 2">
+<meta property="og:description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 变量，必须是字母数字和下划线的组合，且不能以数字开头">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-06T16:33:38.312Z">
+<meta property="og:updated_time" content="2018-04-08T07:36:00.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础语法">
-<meta name="twitter:description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 Python不必声明变量 变量，必须是字母数字和下划线的组合，且不能以数字开头 关于变量 123456x = 1;y = x;y = 2;print(x);x = 2">
+<meta name="twitter:description" content="变量与编码‘#’ 注释 字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “ 布尔值为 True 和 False，可以用and or 和 not （与或非）运算 空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义 变量，必须是字母数字和下划线的组合，且不能以数字开头">
   
     <link rel="alternative" href="/atom.xml" title="Sasuke&#39;s Blog" type="application/atom+xml">
   
@@ -178,7 +178,31 @@
       </header>
     
 	<!-- 目录内容 -->
-		
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量与编码"><span class="toc-number">1.</span> <span class="toc-text">变量与编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据容器"><span class="toc-number">2.</span> <span class="toc-text">数据容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件判断与循环"><span class="toc-number">3.</span> <span class="toc-text">条件判断与循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数"><span class="toc-number">4.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归"><span class="toc-number">5.</span> <span class="toc-text">递归</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      		
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
@@ -186,11 +210,11 @@
 <p>字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “</p>
 <p>布尔值为 True 和 False，可以用and or 和 not （与或非）运算</p>
 <p>空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义</p>
-<p>Python不必声明变量</p>
 <p>变量，必须是字母数字和下划线的组合，且不能以数字开头</p>
+<a id="more"></a>
+<p>Python不必声明变量</p>
 <p><strong>关于变量</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span>;</span><br><span class="line">y = x;</span><br><span class="line">y = <span class="number">2</span>;</span><br><span class="line">print(x);</span><br><span class="line">x = <span class="number">2</span>;</span><br><span class="line">print(x);</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
 <p>/相当于浮点数除法，//表示C中的整型整数相除</p>
 <p>对整数和浮点数的大小没有限制，但是超出一定范围表示为inf（无限大</p>
 <p><code>ord()</code>函数获取字符的整数表示，<code>chr()</code>函数把编码转换为对应的字符</p>
@@ -261,12 +285,49 @@
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>sum()函数参数为一个list</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'sum([1, 2, 3]) ='</span>, sum([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]))</span><br></pre></td></tr></table></figure>
 <p>max()与min()可以含有多个参数</p>
-<p>更多可见<a href="https://docs.python.org/3/library/functions.html#abs" target="_blank" rel="noopener">Python函数英文文档</a></p>
+<p>更多可见<a href="https://docs.python.org/3/library/functions.html#abs" target="_blank" rel="noopener">Python函数文档</a></p>
 <p><strong>定义函数</strong></p>
 <p>在Python中，定义一个函数要使用<code>def</code>语句，依次写出函数名、括号、括号中的参数和冒号<code>:</code>，然后，在缩进块中编写函数体，函数的返回值用<code>return</code>语句返回</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bigger</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> a &gt;= b:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> b</span><br></pre></td></tr></table></figure>
 <p>如果没有<code>return</code>语句，函数执行完毕后也会返回结果，只是结果为<code>None</code>。<code>return None</code>可以简写为<code>return</code></p>
-<p>如果你已经把<code>my_abs()</code>的函数定义保存为<code>abstest.py</code>文件了，那么，可以在该文件的当前目录下启动Python解释器，用<code>from abstest import my_abs</code>来导入<code>my_abs()</code>函数，注意<code>abstest</code>是文件名（不含<code>.py</code>扩展名）</p>
+<p>可以在空函数里加入pass语句，在暂时没想好函数要干什么的时候，来保持函数的通顺。</p>
+<p><strong>返回多个值</strong></p>
+<p>python返回多个值时，返回的是tuple，按位赋予返回的值</p>
+<p><strong>import</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(x, y, step, angle=<span class="number">0</span>)</span>:</span></span><br><span class="line">    nx = x + step * math.cos(angle)</span><br><span class="line">    ny = y - step * math.sin(angle)</span><br><span class="line">    <span class="keyword">return</span> nx, ny</span><br></pre></td></tr></table></figure>
+<p><code>import math</code>语句表示导入<code>math</code>包，并允许后续代码引用<code>math</code>包里的<code>sin</code>、<code>cos</code>等函数。</p>
+<p><strong>默认参数</strong></p>
+<p>定义默认参数要牢记一点：默认参数必须指向不变对象！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_end</span><span class="params">(L=None)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> L <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">        L = []</span><br><span class="line">    L.append(<span class="string">'END'</span>)</span><br><span class="line">    <span class="keyword">return</span> L</span><br></pre></td></tr></table></figure>
+<p>现在，无论调用多少次，都不会有问题：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>add_end()</span><br><span class="line">[<span class="string">'END'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>add_end()</span><br><span class="line">[<span class="string">'END'</span>]</span><br></pre></td></tr></table></figure>
+<p><strong>可变参数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span><span class="params">(*numbers)</span>:</span></span><br><span class="line">    sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> numbers:</span><br><span class="line">        sum = sum + n * n</span><br><span class="line">    <span class="keyword">return</span> sum</span><br></pre></td></tr></table></figure>
+<p>输入为</p>
+<p>calc(1, 2, 3)</p>
+<p>如果函数定义为</p>
+<p>def calc(**num)</p>
+<p>则num为list或tuple</p>
+<p><strong>关键字参数</strong></p>
+<p>而关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict。请看示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name, age, **kw)</span>:</span></span><br><span class="line">    print(<span class="string">'name:'</span>, name, <span class="string">'age:'</span>, age, <span class="string">'other:'</span>, kw)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>person(<span class="string">'Bob'</span>, <span class="number">35</span>, city=<span class="string">'Beijing'</span>)</span><br><span class="line">name: Bob age: <span class="number">35</span> other: &#123;<span class="string">'city'</span>: <span class="string">'Beijing'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>person(<span class="string">'Adam'</span>, <span class="number">45</span>, gender=<span class="string">'M'</span>, job=<span class="string">'Engineer'</span>)</span><br><span class="line">name: Adam age: <span class="number">45</span> other: &#123;<span class="string">'gender'</span>: <span class="string">'M'</span>, <span class="string">'job'</span>: <span class="string">'Engineer'</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>当然，上面复杂的调用可以用简化的写法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>extra = &#123;<span class="string">'city'</span>: <span class="string">'Beijing'</span>, <span class="string">'job'</span>: <span class="string">'Engineer'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>person(<span class="string">'Jack'</span>, <span class="number">24</span>, **extra)</span><br><span class="line">name: Jack age: <span class="number">24</span> other: &#123;<span class="string">'city'</span>: <span class="string">'Beijing'</span>, <span class="string">'job'</span>: <span class="string">'Engineer'</span>&#125;</span><br></pre></td></tr></table></figure>
+<p><code>**extra</code>表示把<code>extra</code>这个dict的所有key-value用关键字参数传入到函数的<code>**kw</code>参数，<code>kw</code>将获得一个dict，注意<code>kw</code>获得的dict是<code>extra</code>的一份拷贝，对<code>kw</code>的改动不会影响到函数外的<code>extra</code>。</p>
+<p><strong>命名关键字函数</strong></p>
+<p>和关键字参数<code>**kw</code>不同，命名关键字参数需要一个特殊分隔符<code>*</code>，<code>*</code>后面的参数被视为命名关键字参数。</p>
+<p>如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收<code>city</code>和<code>job</code>作为关键字参数。这种方式定义的函数如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name, age, *, city, job)</span>:</span></span><br><span class="line">    print(name, age, city, job)</span><br></pre></td></tr></table></figure>
+<p><strong>参数组合</strong></p>
+<p>可以用必选参数、默认参数、可变参数、关键字参数和命名关键字参数，这5种参数都可以组合使用。但是请注意，参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数。</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431752945034eb82ac80a3e64b9bb4929b16eeed1eb9000" target="_blank" rel="noopener">函数的参数详解</a></p>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p><strong>尾递归优化</strong></p>
+<p>尾递归是指，在函数返回的时候，调用自身本身，并且，return语句不能包含表达式。这样，编译器或者解释器就可以把尾递归做优化，使递归本身无论调用多少次，都只占用一个栈帧，不会出现栈溢出的情况。</p>
+<p>如阶乘递归</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fact</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> fact_iter(n, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fact_iter</span><span class="params">(num, product)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> num == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> product</span><br><span class="line">    <span class="keyword">return</span> fact_iter(num - <span class="number">1</span>, num * product)</span><br></pre></td></tr></table></figure>
+<p>Python解释器也没有针对尾递归优化，所以即使把上面的<code>fact(n)</code>函数改成尾递归方式，也会导致栈溢出。</p>
+<p>。。。</p>
 <p>（本文基于廖雪峰的Python教程）</p>
 
       
@@ -351,6 +412,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/05/01/NumpyArrayCreat/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          NumpyArrayCreat
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/03/30/fudu/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">当我谈复读时我谈些什么</div>
@@ -372,6 +442,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量与编码"><span class="toc-number">1.</span> <span class="toc-text">变量与编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据容器"><span class="toc-number">2.</span> <span class="toc-text">数据容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件判断与循环"><span class="toc-number">3.</span> <span class="toc-text">条件判断与循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数"><span class="toc-number">4.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归"><span class="toc-number">5.</span> <span class="toc-text">递归</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -488,19 +571,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快速幂</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color1">numpy</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -513,6 +592,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">摘记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快速幂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>

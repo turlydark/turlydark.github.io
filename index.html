@@ -159,6 +159,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-NumpyArrayCreat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/01/NumpyArrayCreat/">NumpyArrayCreat</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/01/NumpyArrayCreat/" class="archive-article-date">
+  	<time datetime="2018-05-01T08:07:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-01</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="numpy中数组的创建和属性"><a href="#numpy中数组的创建和属性" class="headerlink" title="numpy中数组的创建和属性"></a>numpy中数组的创建和属性</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment">#dtype指定类型</span></span><br><span class="line"><span class="comment">#int（64位） int32  float（64位） float32</span></span><br><span class="line">array = np.array([[<span class="number">1</span>, <span class="number">3.988</span>, <span class="number">4</span>],[<span class="number">12</span>, <span class="number">12</span> , <span class="number">3</span>]], dtype = int)</span><br><span class="line">print(array)</span><br><span class="line"></span><br><span class="line">print(array.ndim)</span><br><span class="line"><span class="comment">#输出维度</span></span><br><span class="line"></span><br><span class="line">print(array.size)</span><br><span class="line"><span class="comment">#元素个数</span></span><br><span class="line"></span><br><span class="line">print(array.shape)</span><br><span class="line"><span class="comment">#行数和列数tuple</span></span><br><span class="line"></span><br><span class="line">all_zero = np.zeros((<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">all_one = np.ones((<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">a = np.empty((<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#全空数组，实际为每个数接近于0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#[[1.39431843e-311 1.39431843e-311]</span></span><br><span class="line"><span class="comment">#[0.00000000e+000 1.39424620e-311]]</span></span><br><span class="line"></span><br><span class="line">array_arange = np.arange(<span class="number">10</span>, <span class="number">20</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment">#创造一个[10,20) 步长为2的数组</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">numpy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/01/NumpyArrayCreat/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -186,10 +262,7 @@
 <p>字符串可用’ 或者” “注释，用\转义字符来标识 ‘ 或 “</p>
 <p>布尔值为 True 和 False，可以用and or 和 not （与或非）运算</p>
 <p>空值：None，不等同于0，空值是一个特殊的数值，0有特殊意义</p>
-<p>Python不必声明变量</p>
 <p>变量，必须是字母数字和下划线的组合，且不能以数字开头</p>
-<p><strong>关于变量</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span>;</span><br><span class="line">y = x;</span><br><span class="line">y = <span class="number">2</span>;</span><br><span class="line">print(x);</span><br><span class="line">x = <span class="number">2</span>;</span><br><span class="line">print(x);</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2018/04/06/python/#more">more >></a>
         
@@ -417,19 +490,19 @@
 
 
   
-    <article id="post-data1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-shujvjiegou" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/21/data1/">临近期末写的数据结构总结</a>
+      <a class="article-title" href="/2018/02/21/shujvjiegou/">临近期末写的数据结构总结</a>
     </h1>
   
 
         
-        <a href="/2018/02/21/data1/" class="archive-article-date">
+        <a href="/2018/02/21/shujvjiegou/" class="archive-article-date">
   	<time datetime="2018-02-21T15:59:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-21</time>
 </a>
         
@@ -446,7 +519,7 @@
 <p>​    21  22  的对称矩阵 ，其一维数组是B[a11 a21 a22]</p>
 <p>求a12的k，实则是求a21,又因为j &gt; i, 所以有j * (j - 1) / 2 + i</p>
         
-          <a class="article-more-a" href="/2018/02/21/data1/#more">more >></a>
+          <a class="article-more-a" href="/2018/02/21/shujvjiegou/#more">more >></a>
         
       
 
@@ -470,7 +543,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/21/data1/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/21/shujvjiegou/">展开全文 >></a>
         </p>
       
 
@@ -500,19 +573,19 @@
 
 
   
-    <article id="post-xiaobo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-mingzi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/21/xiaobo/">我的名字</a>
+      <a class="article-title" href="/2018/02/21/mingzi/">我的名字</a>
     </h1>
   
 
         
-        <a href="/2018/02/21/xiaobo/" class="archive-article-date">
+        <a href="/2018/02/21/mingzi/" class="archive-article-date">
   	<time datetime="2018-02-21T15:27:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-21</time>
 </a>
         
@@ -526,7 +599,7 @@
         <blockquote>
 <p>我的名字对你有什么意义？<br>它会死去，<br>像大海拍击海堤，<br>发出的忧郁的汩汩涛声，<br>像密林中幽幽的夜声。<br>它会在纪念册的黄页上<br>留下暗淡的印痕，<br>就像用无人能懂的语言<br>在墓碑上刻下的花纹。<br>
         
-          <a class="article-more-a" href="/2018/02/21/xiaobo/#more">more >></a>
+          <a class="article-more-a" href="/2018/02/21/mingzi/#more">more >></a>
         
       
 
@@ -550,7 +623,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/21/xiaobo/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/21/mingzi/">展开全文 >></a>
         </p>
       
 
@@ -762,19 +835,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快速幂</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color1">numpy</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -787,6 +856,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">摘记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快速幂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
