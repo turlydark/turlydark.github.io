@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>numpy&amp;&amp;pandas基础 | 满船清梦压星河</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="numpynumpy的属性ndim维度 shape形状 size元素个数 数组创建创建 np.array([1, 2, 3]) np.array([[1, 2, 3], [4, 5, 6]])">
+  <meta name="description" content="numpynumpy的属性ndim维度 shape形状 size元素个数">
 <meta name="keywords" content="numpy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="numpy&amp;&amp;pandas基础">
 <meta property="og:url" content="http://yoursite.com/2018/11/06/numpyfund/index.html">
 <meta property="og:site_name" content="满船清梦压星河">
-<meta property="og:description" content="numpynumpy的属性ndim维度 shape形状 size元素个数 数组创建创建 np.array([1, 2, 3]) np.array([[1, 2, 3], [4, 5, 6]])">
+<meta property="og:description" content="numpynumpy的属性ndim维度 shape形状 size元素个数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-06T12:42:51.952Z">
+<meta property="og:updated_time" content="2018-11-06T12:45:44.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="numpy&amp;&amp;pandas基础">
-<meta name="twitter:description" content="numpynumpy的属性ndim维度 shape形状 size元素个数 数组创建创建 np.array([1, 2, 3]) np.array([[1, 2, 3], [4, 5, 6]])">
+<meta name="twitter:description" content="numpynumpy的属性ndim维度 shape形状 size元素个数">
   
     <link rel="alternative" href="/atom.xml" title="满船清梦压星河" type="application/atom+xml">
   
@@ -185,30 +185,30 @@
         <h2 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h2><h3 id="numpy的属性"><a href="#numpy的属性" class="headerlink" title="numpy的属性"></a>numpy的属性</h3><p>ndim维度</p>
 <p>shape形状</p>
 <p>size元素个数</p>
-<h3 id="数组创建"><a href="#数组创建" class="headerlink" title="数组创建"></a>数组创建</h3><p>创建</p>
-<p><code>np.array([1, 2, 3])</code></p>
-<p><code>np.array([[1, 2, 3], [4, 5, 6]])</code></p>
 <a id="more"></a>
+<h3 id="数组创建"><a href="#数组创建" class="headerlink" title="数组创建"></a>数组创建</h3><p>创建</p>
+<p>np.array([1, 2, 3])</p>
+<p>np.array([[1, 2, 3], [4, 5, 6]])</p>
 <p>指定数据类型(int64)</p>
-<p><code>np.array([1, 2, 3], dtype = int)</code></p>
+<p>np.array([1, 2, 3], dtype = int)</p>
 <p>创建全零数组</p>
-<p><code>np.zeros((3, 4))</code></p>
+<p>np.zeros((3, 4))</p>
 <p>创建全一数组</p>
-<p><code>np.ones((3, 4))</code></p>
+<p>np.ones((3, 4))</p>
 <p>创建全空数组(每个数接近0)</p>
-<p><code>np.empty((3, 4))</code></p>
+<p>np.empty((3, 4))</p>
 <p>arrange指定范围，范围是[1, 12)，步长为2</p>
-<p><code>np.arrange(1, 12, 2)</code></p>
+<p>np.arrange(1, 12, 2)</p>
 <p>reshape改变形状</p>
-<p><code>np.arrange(12).reshape((3, 4))</code></p>
+<p>np.arrange(12).reshape((3, 4))</p>
 <p><strong>linspace分割开始端1与结束端10的数据，生成20个数据</strong></p>
-<p><code>np.linspace(1, 10, 20)</code></p>
+<p>np.linspace(1, 10, 20)</p>
 <h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><p>a与b同行同列，可进行加减乘运算，进行乘运算时，对应位置相乘</p>
-<p><code>c=a+b</code> <code>c=a-b</code> <code>c=a*b</code></p>
+<p>c=a+b c=a-b c=a*b</p>
 <p>numpy中包含数学工具</p>
-<p><code>c =  np.sin(a)</code></p>
+<p>c =  np.sin(a)</p>
 <p>矩阵乘法dot</p>
-<p><code>c = np.dot(a, b)</code></p>
+<p>c = np.dot(a, b)</p>
 <p>在脚本中对<code>print</code>函数进行一些修改可以进行逻辑判断,生成逻辑数组</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(b&lt;<span class="number">3</span>)  </span><br><span class="line"><span class="comment"># array([ True,  True,  True, False], dtype=bool)</span></span><br></pre></td></tr></table></figure>
 <h3 id="一些函数"><a href="#一些函数" class="headerlink" title="一些函数"></a>一些函数</h3><p>如果你需要对行或者列进行查找运算，就需要在上述代码中为 axis 进行赋值。 当axis的值为0的时候，将会以列作为查找单元， 当axis的值为1的时候，将会以行作为查找单元。 </p>
@@ -360,7 +360,7 @@
   
   
     <a href="/2018/11/06/digit-recognizer/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">digit_recognizer</div>
+      <div class="article-nav-title">kaggle之digit recognizer</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -503,6 +503,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">deeplearning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -519,10 +523,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">deeplearning</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
              
@@ -531,11 +531,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
