@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>kaggle之digit recognizer | 满船清梦压星河</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用keras重做了一遍kaggle上的mnist数字识别，正确率98%，还有待提高">
+  <meta name="description" content="用keras重做了一遍kaggle上的mnist数字识别，正确率98%仍有待提高 学了一下怎么从csv转到numpy中的array，这里利用了pandas的DataFrame做中转，将csv和array相互转换。不得不说自己数值处理的基础还是太差。模型用的是keras的cnn，没有做正则化，可能存在overfitting的问题导致正确率没能达到100%，排名榜上还是有100%正确率的。 ​上次去青">
 <meta name="keywords" content="kaggle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kaggle之digit recognizer">
 <meta property="og:url" content="http://yoursite.com/2018/11/06/digit-recognizer/index.html">
 <meta property="og:site_name" content="满船清梦压星河">
-<meta property="og:description" content="用keras重做了一遍kaggle上的mnist数字识别，正确率98%，还有待提高">
+<meta property="og:description" content="用keras重做了一遍kaggle上的mnist数字识别，正确率98%仍有待提高 学了一下怎么从csv转到numpy中的array，这里利用了pandas的DataFrame做中转，将csv和array相互转换。不得不说自己数值处理的基础还是太差。模型用的是keras的cnn，没有做正则化，可能存在overfitting的问题导致正确率没能达到100%，排名榜上还是有100%正确率的。 ​上次去青">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-06T12:46:45.674Z">
+<meta property="og:updated_time" content="2018-11-06T13:08:46.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kaggle之digit recognizer">
-<meta name="twitter:description" content="用keras重做了一遍kaggle上的mnist数字识别，正确率98%，还有待提高">
+<meta name="twitter:description" content="用keras重做了一遍kaggle上的mnist数字识别，正确率98%仍有待提高 学了一下怎么从csv转到numpy中的array，这里利用了pandas的DataFrame做中转，将csv和array相互转换。不得不说自己数值处理的基础还是太差。模型用的是keras的cnn，没有做正则化，可能存在overfitting的问题导致正确率没能达到100%，排名榜上还是有100%正确率的。 ​上次去青">
   
     <link rel="alternative" href="/atom.xml" title="满船清梦压星河" type="application/atom+xml">
   
@@ -182,41 +182,44 @@
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用keras重做了一遍kaggle上的mnist数字识别，正确率98%，还有待提高</p>
+        <p>用keras重做了一遍kaggle上的mnist数字识别，正确率98%仍有待提高</p>
+<p>学了一下怎么从csv转到numpy中的array，这里利用了pandas的DataFrame做中转，将csv和array相互转换。不得不说自己数值处理的基础还是太差。模型用的是keras的cnn，没有做正则化，可能存在overfitting的问题导致正确率没能达到100%，排名榜上还是有100%正确率的。</p>
+<p>​上次去青大参加全国绿色计算大赛之后，整个人沉浸在菜的情绪里。亲眼见识到自己与别人的差距之后，才明白我做的还不够。虽然现在做的仍然是很基础的内容，但我相信自己也会变强的（希望不要变秃~</p>
+<a id="more"></a>
+<p>读取数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> models</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> layers</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">train = pd.read_csv(<span class="string">r'C:\Users\98766\Desktop\digit_recognizer\train.csv'</span>)</span><br><span class="line">test = pd.read_csv(<span class="string">r'C:\Users\98766\Desktop\digit_recognizer\test.csv'</span>)</span><br><span class="line"></span><br><span class="line">print(np.shape(train))</span><br><span class="line"><span class="comment"># print(train)</span></span><br></pre></td></tr></table></figure>
+<p>输出了一下训练数据的大小，方便进行标签和数据分割。</p>
+<p>(42000, 785)</p>
+<p>获取42000个数字的标签</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">matrix_train = np.array(train)</span><br><span class="line"></span><br><span class="line">print(matrix_train[:,<span class="number">0</span>])</span><br><span class="line">print(np.shape(matrix_train[:,<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
+<p>[1 0 1 … 7 6 9]<br>(42000,)</p>
+<p>将DataFrame格式转为array后，将train_lables与train_data分为两个矩阵</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">train_data = matrix_train[:, <span class="number">1</span>:]</span><br><span class="line">train_labels = matrix_train[:, <span class="number">0</span>]</span><br><span class="line">print(np.shape(train_data))</span><br><span class="line">print(np.shape(train_labels))</span><br></pre></td></tr></table></figure>
+<p>(42000, 784)<br>(42000,)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">matrix_test = np.array(test)</span><br><span class="line"><span class="comment"># print(np.shape(matrix_test))</span></span><br><span class="line"></span><br><span class="line">test_data = matrix_test</span><br><span class="line">print(np.shape(test_data))</span><br></pre></td></tr></table></figure>
+<p>(28000, 784)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">train_data = train_data.reshape((<span class="number">42000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">train_data = train_data.astype(<span class="string">'float32'</span>) / <span class="number">255</span></span><br><span class="line"></span><br><span class="line">test_data = test_data.reshape((<span class="number">28000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">test_data = test_data.astype(<span class="string">'float32'</span>) / <span class="number">255</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(train_data.shape)</span><br><span class="line">print(test_data.shape)</span><br></pre></td></tr></table></figure>
+<p>(42000, 28, 28, 1)<br>(28000, 28, 28, 1)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">model = models.Sequential()</span><br><span class="line">model.add(layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>), activation = <span class="string">'relu'</span>, input_shape = (<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)))</span><br><span class="line">model.add(layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation = <span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation = <span class="string">'relu'</span>))</span><br><span class="line"></span><br><span class="line">model.add(layers.Flatten())</span><br><span class="line">model.add(layers.Dense(<span class="number">64</span>, activation = <span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.Dense(<span class="number">10</span>, activation = <span class="string">'softmax'</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> to_categorical</span><br><span class="line"></span><br><span class="line">model.compile(optimizer = <span class="string">'rmsprop'</span>,</span><br><span class="line">             loss = <span class="string">'categorical_crossentropy'</span>,</span><br><span class="line">             metrics = [<span class="string">'accuracy'</span>])</span><br><span class="line">train_labels = to_categorical(train_labels)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(train_data, train_labels, epochs = <span class="number">5</span>, batch_size = <span class="number">64</span>)</span><br></pre></td></tr></table></figure>
+<p>Epoch 1/5<br>42000/42000 [==============================] - 52s 1ms/step - loss: 0.2107 - acc: 0.9330<br>Epoch 2/5<br>42000/42000 [==============================] - 48s 1ms/step - loss: 0.0554 - acc: 0.9829<br>Epoch 3/5<br>42000/42000 [==============================] - 47s 1ms/step - loss: 0.0377 - acc: 0.9880<br>Epoch 4/5<br>42000/42000 [==============================] - 45s 1ms/step - loss: 0.0277 - acc: 0.9910<br>Epoch 5/5<br>42000/42000 [==============================] - 45s 1ms/step - loss: 0.0222 - acc: 0.9928</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = model.predict(test_data)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<p>array([[7.59925040e-11, 1.36920995e-11, 1.00000000e+00, …,<br>        4.29658115e-10, 4.39329614e-11, 1.46485793e-14],<br>       [9.99999642e-01, 3.90255397e-11, 1.48759597e-07, …,<br>        1.18138765e-09, 3.82478405e-09, 9.15689711e-08],<br>       [1.09676088e-10, 6.55351329e-09, 4.87750151e-09, …,<br>        3.19772013e-08, 2.09076115e-05, 9.99802649e-01],<br>       …,<br>       [3.46862440e-17, 5.48330966e-13, 2.97547056e-12, …,<br>        1.94214263e-11, 1.10282456e-13, 2.55544365e-13],<br>       [6.38836373e-10, 6.43880327e-09, 1.44304058e-09, …,<br>        3.09212602e-08, 5.81907670e-07, 9.98477757e-01],<br>       [2.47985226e-12, 2.33079337e-11, 1.00000000e+00, …,<br>        1.46779755e-10, 1.70961606e-10, 3.75092489e-15]], dtype=float32)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.shape</span><br></pre></td></tr></table></figure>
+<p>(28000, 10)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">b = np.argmax(a,axis = <span class="number">1</span>)</span><br><span class="line">b = b.reshape((<span class="number">28000</span>,<span class="number">1</span>))</span><br><span class="line">print(b.shape)</span><br><span class="line"><span class="comment"># print(b)</span></span><br></pre></td></tr></table></figure>
+<p>(28000, 1)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c = np.arange(<span class="number">1</span>, <span class="number">28001</span>).reshape((<span class="number">28000</span>,<span class="number">1</span>))</span><br><span class="line">print(c.shape)</span><br><span class="line"><span class="comment"># print(c)</span></span><br></pre></td></tr></table></figure>
+<p>(28000, 1)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = np.hstack((c,b))</span><br><span class="line">d.shape</span><br></pre></td></tr></table></figure>
+<p>(28000, 2)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = pd.DataFrame(d, columns = [<span class="string">'ImageId'</span>, <span class="string">'Label'</span>])</span><br><span class="line"><span class="comment"># print(data)</span></span><br><span class="line">data.to_csv(<span class="string">'data.csv'</span>, index = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>虽然能够输出一个符合kaggle格式的csv文件，但我觉得应该还有更好的方式，有待更新~</p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢啦<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://p4i9hxzzr.bkt.clouddn.com/18-10-5/47051627.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://p4i9hxzzr.bkt.clouddn.com/18-10-5/61830194.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -451,10 +454,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">deeplearning</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -471,11 +470,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color3">deeplearning</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">摘记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
              
               <li class="article-tag-list-item">
